@@ -102,7 +102,7 @@ teams = pd.DataFrame(
         ['Arkansas State', 'Sun Belt'],
         ['Army', 'American'],
         ['Auburn', 'SEC'],
-        ['Ball State', 'MAC'], # testicle, testicle ttate
+        ['Ball State', 'MAC'], 
         ['Baylor', 'Big 12'],
         ['Boise State', 'Mountain West'], # boise
         ['Boston College', 'ACC'], # bc
@@ -238,8 +238,6 @@ teams['Team'] = teams['Team'].str.lower()
 alt_names = {
     # 'alternate name': 'official team name'
     'app state': 'appalachian state',
-    'testicle': 'ball state',
-    'testicle state': 'ball state',
     'boise': 'boise state',
     'bc': 'boston college',
     'bg': 'bowling green',
