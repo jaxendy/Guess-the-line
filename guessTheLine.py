@@ -1,4 +1,5 @@
 import pandas as pd
+from collections import defaultdict
 df = pd.DataFrame()
 # Initialize variables to None firstx
 week_dfs = {}  # Dictionary to store week dataframes
@@ -361,7 +362,7 @@ count = {player: 0 for player in playerList}
 # Create a list to track possible matchups
 matchups = [f'{player1} vs {player2}' for i, player1 in enumerate(playerList) for player2 in playerList[i+1:]]
 # Keep dictionary of matchups to keep track of score
-relativeTrack = {m: 0 for m in matchups}
+relativeTrack = defaultdict(int)
 
 # Create the dataframe based on scoreType
 if scoreType == 'p':
@@ -483,17 +484,21 @@ while not done:
     # Score update for relative and both systems
       for i in range (len(playerList)):
          for j in range (i + 1, len(playerList)):
+            if i == j:
+              continue
             p1 = playerList[i]
             p2 = playerList[j]
+            
+            key = f'{min(p1, p2)} vs {max(p1, p2)}'
             result = comparePlayers(p1, p2)
             # RESULT ALWAYS IN TERMS OF HIGHERER INDEX PLAYER
-            if result == 1:
-              relativeTrack[f'{p1} vs {p2}'] += 1
-            elif result == -1:
-              relativeTrack[f'{p1} vs {p2}'] -= 1
-            else:
-              continue
-
+            if key not in relativeTrack:
+              if result == 1:
+                relativeTrack[key] += 1
+              elif result == -1:
+                relativeTrack[key] -= 1
+              else:
+                continue
     # Print results
     # Add to dataframe based on scoreType
        
