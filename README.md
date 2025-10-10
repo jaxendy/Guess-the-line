@@ -30,7 +30,7 @@ How to Play:
 2. Either:
        (Preferred) Use a drawing app to draw over all the lines on the sheet and erase them as you go
        Find a third party that can read the games to you where you can then enter the data into the laptop (so you can not see the lines on the sheet).
-4. **MAKE SURE YOU UPDATE THE FILEPATHS ON LINE **_9_**, **_571_** AND **_574_** TO SAVE WHERE DESIRED. I RECOMMEND MAKING A NEW FOLDER CALLED "Guess the Line" WITH A FOLDER INSIDE CALLED WEEKS**
+4. **MAKE SURE YOU UPDATE THE FILEPATHS ON LINE **_9_**, **_571_** AND **_574_** TO SAVE WHERE DESIRED. I RECOMMEND MAKING A NEW FOLDER CALLED "Guess the Line" WITH A FOLDER INSIDE CALLED "weeks"**
 5. Run the script: python guess_the_line.py
 6. Choose your scoring system (p (point), r (relative) or b (both).
 7. Enter each player’s name.
