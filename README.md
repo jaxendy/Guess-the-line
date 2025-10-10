@@ -30,11 +30,11 @@ How to Play:
 2. Either:
        (Preferred) Use a drawing app to draw over all the lines on the sheet and erase them as you go
        Find a third party that can read the games to you where you can then enter the data into the laptop (so you can not see the lines on the sheet).
-4. Run the script:
+4. Run the script:       NOTE: MAKE SURE YOU UPDATE THE FILEPATHS ON LINE ,  AND  TO SAVE WHERE DESIRED. I RECOMMEND MAKING A NEW FOLDER CALLED "Guess the Line" WITH A FOLDER INSIDE CALLED WEEKS
    python guess_the_line.py
-5. Choose your scoring system (p (point), r (relative) or b (both).
-6. Enter each player’s name.
-7. Input your guesses for each matchup.
-8. Once the actual lines are available, the script will calculate distances and scores.
-9. Do as many games as you want, the csv updates iteratively so you can quit any time.
+6. Choose your scoring system (p (point), r (relative) or b (both).
+7. Enter each player’s name.
+8. Input your guesses for each matchup.
+9. Once the actual lines are available, the script will calculate distances and scores.
+10. Do as many games as you want, the csv updates iteratively so you can quit any time.
 
