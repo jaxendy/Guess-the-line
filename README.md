@@ -26,7 +26,7 @@ Files:
 
 How to Play:
 
-1. Pull the betting lines for games for an upcoming week (preferably from Circa Sports via https://x.com/CircaSports). Try to do earlier in the week so lines are sharper
+1. Pull the betting lines for games for an upcoming week (preferably from Circa Sports via https://x.com/CircaSports for example https://x.com/CircaSports/status/1974900025529672163). Try to do earlier in the week so lines are sharper
 2. Either:
        (Preferred) Use a drawing app to draw over all the lines on the sheet and erase them as you go
        Find a third party that can read the games to you where you can then enter the data into the laptop (so you can not see the lines on the sheet).
