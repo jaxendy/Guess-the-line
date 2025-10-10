@@ -1,4 +1,4 @@
-#####Guess the Line#####
+#####       Guess the Line       #####
 
 A simple Python game where players try to predict the betting lines for upcoming college football matchups.
 
