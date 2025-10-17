@@ -4,10 +4,11 @@ df = pd.DataFrame()
 # Initialize variables to None firstx
 week_dfs = {}  # Dictionary to store week dataframes
 weekDf = []    # List of loaded week keys
+filepath = 'FILEPATH_HERE'
 
 for week in range(15):
     try:
-        file_path = f'/filepath/weeks/week{week}gtl.csv'
+        file_path = f'{filepath}/weeks/week{week}gtl.csv'
         df = pd.read_csv(file_path)
         week_key = f'week{week}'
         week_dfs[week_key] = df
@@ -573,8 +574,8 @@ while not done:
     iteration += 1
 
     if keepGoing == 'y':
-      weeklyDf.to_csv(f'/filepath/weeks/week{week}gtl.csv', index = False, mode = 'w')
+      weeklyDf.to_csv(f'{filepath}/weeks/week{week}gtl.csv', index = False, mode = 'w')
       continue
     if keepGoing == 'n':
-      weeklyDf.to_csv(f'/filepath/week{week}gtl.csv', index = False, mode = 'w')
+      weeklyDf.to_csv(f'{filepath}/weeks/week{week}gtl.csv', index = False, mode = 'w')
       done = True
