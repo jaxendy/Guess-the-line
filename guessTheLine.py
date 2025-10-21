@@ -482,24 +482,26 @@ while not done:
         
     
     if scoreType in ['r', 'b']:
-    # Score update for relative and both systems
-      for i in range (len(playerList)):
-         for j in range (i + 1, len(playerList)):
-            if i == j:
-              continue
-            p1 = playerList[i]
-            p2 = playerList[j]
-            
-            key = f'{min(p1, p2)} vs {max(p1, p2)}'
-            result = comparePlayers(p1, p2)
-            # RESULT ALWAYS IN TERMS OF HIGHERER INDEX PLAYER
-            if key not in relativeTrack:
-              if result == 1:
-                relativeTrack[key] += 1
-              elif result == -1:
-                relativeTrack[key] -= 1
-              else:
-                continue
+        for i in range(len(playerList)):
+            for j in range(i + 1, len(playerList)):
+                p1, p2 = playerList[i], playerList[j]
+                result = comparePlayers(p1, p2)
+                
+                # Always use lexicographic key for consistency
+                key = f'{min(p1, p2)} vs {max(p1, p2)}'
+                relativeTrack[key] = relativeTrack.get(key, 0)
+                
+                # Adjust sign depending on which player the result favors
+                if result == 1:   # Higher index player wins (p2)
+                    if p2 == max(p1, p2):
+                        relativeTrack[key] += 1
+                    else:
+                        relativeTrack[key] -= 1
+                elif result == -1:  # Higher index player loses (p1 wins)
+                    if p1 == max(p1, p2):
+                        relativeTrack[key] += 1
+                    else:
+                        relativeTrack[key] -= 1
     # Print results
     # Add to dataframe based on scoreType
        
