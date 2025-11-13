@@ -558,7 +558,7 @@ while not done:
       for player in playerList:
         print(f'{player} was off by {distance[player]}')
       print('\n')
-      print("Relative Score (First team is +):")
+      print("Relative Score (First player is +):")
       for matchup in matchups:
         print(f'{matchup}: {relativeTrack[matchup]}')
       print('\n')
