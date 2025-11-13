@@ -43,18 +43,29 @@ The next step is to webscrape those files when they come out on twitter, so it w
 
 The game is: ALABAMA VS AUBURN
 
+
 Player 1 Guess: -7 <- imputed
+
 Player 2 Guess: pick <- imputed
+
 Player 3 Guess: -4 <- imputed
+
 
 THE ACTUAL LINE WAS -6
 
+
 Points:
 Player 1: 1.0
+
 Player 2: 0.0
+
 Player 3: 0.0
 
+
 Relative (The first player is +):
+
 Player 1 vs. Player 2: 1
+
 Player 1 vs. Player 3: 1
+
 Player 2 vs. Player 3: -1
