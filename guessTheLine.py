@@ -243,6 +243,7 @@ alt_names = {
     'boise': 'boise state',
     'bc': 'boston college',
     'bg': 'bowling green',
+    'bgsu': 'bowling green',
     'cal': 'california',
     'central': 'central michigan',
     'cmu': 'central michigan',
@@ -272,8 +273,7 @@ alt_names = {
     'ulm': 'louisiana-monroe',
     'la tech': 'louisiana tech',
     'miami fl': 'miami (fl)',
-    'miami oh': 'miami (oh)',
-    'miami': 'miami (oh)',  # could go either way
+    'miami oh': 'miami (oh)', 
     'um': 'michigan',
     'msu': 'michigan state',
     'mtsu': 'middle tennessee',
@@ -480,28 +480,22 @@ while not done:
         for player in winners:
           count[player] += 1 / numWinners
         
-    
+    # Score update for relative and both systems
+
     if scoreType in ['r', 'b']:
-        for i in range(len(playerList)):
-            for j in range(i + 1, len(playerList)):
-                p1, p2 = playerList[i], playerList[j]
-                result = comparePlayers(p1, p2)
-                
-                # Always use lexicographic key for consistency
-                key = f'{min(p1, p2)} vs {max(p1, p2)}'
-                relativeTrack[key] = relativeTrack.get(key, 0)
-                
-                # Adjust sign depending on which player the result favors
-                if result == 1:   # Higher index player wins (p2)
-                    if p2 == max(p1, p2):
-                        relativeTrack[key] += 1
-                    else:
-                        relativeTrack[key] -= 1
-                elif result == -1:  # Higher index player loses (p1 wins)
-                    if p1 == max(p1, p2):
-                        relativeTrack[key] += 1
-                    else:
-                        relativeTrack[key] -= 1
+      for i in range(len(playerList)):
+          for j in range(i + 1, len(playerList)):
+              p1, p2 = playerList[i], playerList[j]
+              result = comparePlayers(p1, p2)
+              
+              key = f'{p1} vs {p2}'  # maintain actual pairing order
+              relativeTrack[key] = relativeTrack.get(key, 0)
+              
+              # result: 1 if p1 closer, -1 if p2 closer, 0 if tie
+              if result == 1:
+                  relativeTrack[key] += 1   # p1 wins
+              elif result == -1:
+                  relativeTrack[key] -= 1   # p2 wins
     # Print results
     # Add to dataframe based on scoreType
        
