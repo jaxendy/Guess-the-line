@@ -5,10 +5,8 @@ A simple Python game where players try to predict the betting lines for upcoming
 Overview:
 
 Each week, the script:
-1. Pulls the schedule of college football games.
-2. Displays each matchup (home vs. away).
-3. Lets each player enter their guessed spread for every game.
-4. After the real betting lines are revealed, it compares everyone’s guesses to the actual lines.
+1. Lets each player enter their guessed spread for every game.
+2. After the real betting lines are revealed, it compares everyone’s guesses to the actual lines.
 
 Points or scores are then awarded based on how close each player’s predictions were — or through head-to-head “relative” matchups where players compete directly against each other.
 
@@ -38,3 +36,25 @@ How to Play:
 9. Once the actual lines are available, the script will calculate distances and scores.
 10. Do as many games as you want, the csv updates iteratively so you can quit any time.
 
+
+***NEXT STEPS***
+
+The next step is to webscrape those files when they come out on twitter, so it would tell you the game and all you would have to impute is the guesses, then it would tell you the line and update the score automatically. Example:
+
+The game is: ALABAMA VS AUBURN
+
+Player 1 Guess: -7 <- imputed
+Player 2 Guess: pick <- imputed
+Player 3 Guess: -4 <- imputed
+
+THE ACTUAL LINE WAS -6
+
+Points:
+Player 1: 1.0
+Player 2: 0.0
+Player 3: 0.0
+
+Relative (The first player is +):
+Player 1 vs. Player 2: 1
+Player 1 vs. Player 3: 1
+Player 2 vs. Player 3: -1
