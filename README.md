@@ -39,7 +39,7 @@ How to Play:
 
 ***NEXT STEPS***
 
-The next step is to webscrape those files when they come out on twitter, so it would tell you the game and all you would have to impute is the guesses, then it would tell you the line and update the score automatically. Example:
+The next step is to webscrape those posts when they come out on twitter, so it would tell you the game and all you would have to impute is the guesses, then it would tell you the line and update the score automatically. Example:
 
 The game is: ALABAMA VS AUBURN
 
@@ -69,3 +69,8 @@ Player 1 vs. Player 2: 1
 Player 1 vs. Player 3: 1
 
 Player 2 vs. Player 3: -1
+
+
+***CONTACT***
+
+If you have any questions about the program or playing the game, feel free to email me at jaxendy@gmail.com
